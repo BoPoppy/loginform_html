@@ -99,12 +99,18 @@ input, select {
     text-decoration: none;
 
 }
-
+main{
+    padding-top: 100px;
+}
 body{
     background-color: #f3f3f3;
 }
 
 header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     background-color: #fff;
     width: 100%;
     height: 100px;
@@ -127,6 +133,7 @@ header nav ul {
     display: block;
     margin: 0 auto;
     width: fit-content;
+    text-transform: uppercase;
 }
 
 header nav ul li {
@@ -134,25 +141,65 @@ header nav ul li {
     float: left;
     list-style: none;
     padding: 0 16px;
+    position: relative;
 }
 
 header nav ul li a {
     font-family: Catamaran;
+    display: block;
     font-size: 16px;
     color: #111;
+}
+header nav ul li ul{
+    position: absolute;
+
+    float: left;
+}
+
+header nav ul li ul li a{
+    display: block;
+    font-size: 14px;
+    padding: 20px 14px;
+    text-decoration: none;
+    background-color: #fff;
 }
 
 header .picture-header{
     display: none;
 }
 
-@media (min-witdh: 1000px) {
+@media only screen and (orientation: landscape) {
     header .header-name{
-        margin: 0;
+        margin: 30px 0;
         text-align: left;
-        padding: 20px 20px 20px 0;
-        border-right: px;
+        padding: 0 20px 0 40px;
+        border-right: 3px solid #111;
+        float: left;
+        line-height: 40px;
     
+    }
+
+    header nav ul {
+        margin: 20px 0 0 20px;
+        float: left;
+    }
+    
+    header nav ul li a {
+        line-height: 60px;
+    }
+
+    header .picture-header{
+        display: block;
+        font-family: Catamaran;
+        font-size: 16px;
+        color: #111;
+        text-transform: uppercase;
+        border: 1px solid #111;
+        float: right;
+        line-height: 40px;
+        margin-right: 40px;
+        margin-top: 30px;
+        padding: 0 20px;
     }
 }
 
@@ -212,6 +259,46 @@ header .picture-header{
     color: #111;
 }
 
+@media only screen and (orientation: landscape){
+    .wrapper{
+        width: 1000px;
+        margin: 0 auto;
+    }
+    .index-banner{
+        height: 550px;
+    }
+
+    .index-banner h1{
+        display: block;
+        width: 560px;
+        margin: 0 auto;
+    }
+
+    .link-index {
+        overflow: hidden;
+    }
+
+    .link-index div{
+        margin: 20px 10px 0;
+        width: calc(100% - 30px);
+        height: 230px;
+        background-color: #dbdbd6f5;
+        float: left;
+    }
+
+    .boxlink-1{
+        width: calc(50% - 50px) !important;
+    }
+
+    .boxlink-2{
+        width: calc(50% - 50px) !important;
+    }
+
+    .link-index div h3{
+        line-height: 230px;
+    }
+}
+
 /*FOOTER*/
 
 footer{
@@ -238,7 +325,7 @@ footer ul li a{
     font-size: 20px;
     color: #fff;
     line-height: 50px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .project-link{
@@ -253,4 +340,25 @@ footer ul li a{
 .social-media img {
     width: 45px;
     margin-bottom: 10px;
+}
+
+@media only screen and (orientation: landscape){
+    .project-link{
+        display: block;
+    }
+
+    footer ul{
+        width: fit-content;
+        float: left;
+        padding-left: 20px;
+        padding-right: 35px;
+    }
+
+    footer ul li p{
+        font-family: Catamaran;
+        font-size: 20px;
+        color: #fff;
+        line-height: 50px;
+        text-transform: uppercase;
+    }
 }
